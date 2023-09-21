@@ -5,10 +5,9 @@
     $password = "";
 
     try {
-        $connection = new PDO("mysql:host=$hostname;dbname=php_db", $username, $password);
+        $connection = new PDO("mysql:host=$hostname;dbname=demo", $username, $password);
         // set the PDO error mode to exception
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        //echo "Database connected successfully";
     } catch(PDOException $e) {
         echo "Database connection failed: " . $e->getMessage();
     }
